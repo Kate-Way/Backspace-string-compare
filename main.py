@@ -15,7 +15,7 @@ def do_they_match(str_1, str_2):
             # two is the number of characters that will be deleted by # (the # and the char before it)
             skip = 1
             # check if the next symbol after # is also a # or if we have to pass by the character
-            while str_1[a-1] == '#' or skip > 0 :
+            while (a >= 0 and str_1[a] == '#') or (a >= 0 and skip > 0):
                 if str_1[a-1] == '#':
                 # increase the count and move the pointer
                     skip += 1
@@ -27,7 +27,7 @@ def do_they_match(str_1, str_2):
 
         if str_2[b] == '#':
             skip = 1
-            while str_2[b-1] == '#' or skip > 0 :
+            while (b >= 0 and t[b] == '#') or (b >= 0 and skip > 0):
                 if str_2[b-1] == '#':
                     skip += 1
                     b - = 1
